@@ -4,9 +4,14 @@ from sklearn.model_selection import train_test_split
 from collections import Counter
 
 
-class RegressionSKFold:
+class ContinuousSKFold:
     """
     Stratified K Fold for continuous data split
+    ---
+    
+    folder = ContinuousSKFold(X=X,y=y)
+    folds = folder.create_folds()
+    
     """
 
     def __init__(self, X, y, n_folds=2):
